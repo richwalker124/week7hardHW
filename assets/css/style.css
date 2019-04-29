@@ -1,0 +1,21 @@
+.text-box{
+    width : 40vw; 
+    height : 10vw;
+}
+
+.player-chat{
+    width:100%;
+    margin-left : 1vw;
+}
+
+body{
+    
+}
+
+img{
+    height: 16vw;
+    width: 9vw;
+}
+button{
+    margin: .5vw;
+}

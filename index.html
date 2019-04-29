@@ -4,14 +4,107 @@
     <meta name = "viewport" content = "width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel = "stylesheet" type = "text/css" href = "assets/css/styles.css">
+    <link rel = "stylesheet" type = "text/css" href = "assets/css/style.css">
     <link rel="icon" href="assets/images/#">
-    <title>The great GIF aquirer</title>
+    <title>Rock Paper Scissors</title>
     </head>
 
     <body>
+        <div class = "container">
+            <div class = "jumbotron">
+                <!--Title at top introducing game.-->
+                <h3 class = "text-center">Rock Paper Scissors LIVE AT THE WEBSITE</h3>
+            </div>
+ <!--Box on left and right of web page, this will hold user name (or player 1 player 2) as well as the options they have chosen or whehter or not they are thinking (they are thinking as long as they haven't selected a move) or ready.-->
+            <div class = "row">
+                <div class = "col-md-1"></div>
+                <!--This is where the one of the boxes will go-->
+                <div class = "col-md-4">
+                    <div class = "card" style = "width: 18rem">
+                        <img class = "card-img-top" id = "player-one-img" src = "assets/images/waiting.gif" alt = "image">
+                        <div class = "card-body text-center">
+                            <h5>Player: <span id = "p1-display-name">Player One</span></h4>
+                            <input type = "text" class = "playeronelogin" id = "p1-name" maxlength="10" placeholder="Enter Your Name..."> <button class = "playeronelogin" id = "play-one-submit">GO!</button>
+                            <button class = "playerOneButtons" value = "rock">Rock</button>
+                            <button class = "playerOneButtons" value = "paper">Paper</button>
+                            <button class = "playerOneButtons" value = "scissor">Scissors</button>
+                            <p>Wins: <span id = "player-one-wins"></span></p>
+                            <p>Total Games: <span id = "player-one-total-games"></span></p>
+                            <br>
+                            <button class = "playerOneButtons" id = "p1-leave">Quit</button>
+                            
+                        </div>
 
-        <script src = "assets/"
+                    </div>
+
+                </div>
+                <div class = "col-md-2"></div>
+                <!--Second box goes here!-->
+                <div class = "col-md-4">
+                    <div class = "card" style = "width: 18rem;">
+                        <img class = "card-img-top" id = "player-two-img" src = "assets/images/waiting.gif" alt = "image">
+                        <div class = "card-body text-center">
+                            <h5>Player: <span id = "p2-display-name">Player Two</span></h4>
+                            <input type = "text" class = "playertwologin" id = "p2-name" maxlength="10" placeholder="Enter Your Name..."> <button class = "playertwologin" id = "play-two-submit">GO!</button>
+                            <button class = "playerTwoButtons" value = "rock">Rock</button>                                
+                            <button class = "playerTwoButtons" value = "paper">Paper</button>
+                            <button class = "playerTwoButtons" value = "scissor">Scissors</button>
+                            <p>Wins: <span id = "player-two-wins"></span></p>
+                            <p>Total Games: <span id = "player-two-total-games"></span></p>
+                            <br>
+                            <button  class = "playerTwoButtons" id = "p2-leave">Quit</button>
+                        </div>
+        
+                    </div>
+                </div>
+                <div class = "col-md-1"></div>
+            </div>
+
+            <div class = "row " >
+                <div class = "col-md-2"></div>
+                <div class = "col-md-7">
+
+                <!--Chat box goes to the bottom. Players can talk there with their usernames. It may be better to have players create names down here. If -->
+                    <div style = "text-align: center;"> 
+                         <div class = "card d-flex justify-content-center ">
+                        <div class = "card-body text-left user-chat ">
+                            
+
+                         </div>
+                        <div class = "row ">
+                            <!--Text Box-->
+                            <div class = "col-md-10 chat-box">
+                                <input type = "text" class = "player-chat d-flex p-2 chat-box" maxlength="150s" placeholder="Type Here...">
+                            </div>
+                            <div class = "col-md-2">
+                                <button class = "chat-input chat-box">Send</button>
+                            </div>
+                        </div>
+                   </div> 
+                    </div>
+                </div>
+                <div class = "col-md-3"></div>
+             </div>
+
+             <!--This row contains the total reset button.-->
+             <div class = "row">
+                 <div class = "col-md-4"></div>
+                 <div class = "col-md-3">
+                     <p>This button should ONLY be pressed if a player isn't present! It resets all stats and names!</p>
+                 <button id = "reset">HARD RESET</button>    
+                 </div>
+                 <div class = "col-md-5"></div>
+             </div>
+             
+        </div>
+        
+       
+       
+        <!--Three buttons under chatbox, coloring them will change the theme of the webpage (This is a big maybe)-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+        <script src = "assets/js/javascript.js"></script>
     </body>
 
     </html>
