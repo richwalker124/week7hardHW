@@ -1,11 +1,18 @@
 .text-box{
     width : 40vw; 
-    height : 10vw;
+    height : 30vw;
+}
+
+.chat-input{
+    margin : 1vw;
 }
 
 .player-chat{
+    height : 2vw;
     width:100%;
     margin-left : 1vw;
+    overflow: scroll;
+    
 }
 
 body{

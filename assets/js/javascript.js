@@ -108,17 +108,25 @@ function playerTwoSave(){
 function userNameOne(arg){
     if (arg === show){
         $(".playeronelogin").show();
+        //console.log(arg)
+            //console.log("show in")
     }
         if (arg === hide){
+           // console.log(arg)
+            //onsole.log(" in hide")
             $(".playeronelogin").hide();
         }
 }
 
 function userNameTwo(arg){
     if (arg === show){
+ console.log(arg)
+            console.log("show in")
         $(".playertwologin").show();
     }
         if (arg === hide){
+            console.log(arg)
+            console.log(" in hide")
             $(".playertwologin").hide();
         }
 }
@@ -270,11 +278,11 @@ $("#play-two-submit").on("click", function(){
     //Sets the player one to in use, then hides the options for player two!
     playerTwo.inUse = true;
     playButtonsOne(hide);
-    // userNameTwo(hide);
+    userNameTwo(hide);
     //Hides input after done
     imageSwapTwo();
     imageSwapOne();
-    userNameTwo(hide);
+   // userNameTwo(hide);
     userNameOne(hide);
     
     playerTwoSave();
@@ -332,7 +340,7 @@ $(".playerOneButtons").on("click", function(){
   })
 
   $(".chat-input").on("click", function(){
-      alert("button press")
+     // alert("button press")
      if (playerOneLocal === true){
 
          playerOne.chat = $(".player-chat").val();
@@ -480,25 +488,34 @@ imageSwapTwo();
 updateDOM();
 //alert("data changed!")
 if (playerOne.inUse === true && playerOneLocal === true){
+    //console.log("hide name 2")
     playButtonsOne(show);
-    userNameTwo(hide);
+   // alert("HIDE NAME")
+   userNameTwo(hide);
+  //  $(".playertwologin").hide();
 }else if (playerOne.inUse === true && playerOneLocal !== true){
+    //console.log("hide name 1")
     playButtonsOne(hide);
     userNameOne(hide);
 }else if (playerOne.inUse !== true && playerOneLocal !== true){
-    playButtonsOne(hide)
-    userNameOne(show)
+    //console.log("Show name one")
+///playButtonsOne(hide)
+    //userNameOne(show)
 }
 
+//For 
 if (playerTwo.inUse === true && playerTwoLocal === true){
+    //console.log("Hide name one")
     playButtonsTwo(show);
     userNameOne(hide);
 }else if (playerTwo.inUse === true && playerTwoLocal !== true){
+    //console.log("Hide name two")
     playButtonsTwo(hide);
     userNameTwo(hide);
 }else if (playerTwo.inUse !== true && playerTwoLocal !== true) {
-    playButtonsTwo(hide);
-    userNameTwo(show);
+    //console.log("Show name two")
+    //playButtonsTwo(hide);
+   // userNameTwo(show);
 }
 
 if (totalWins !== playerOne.wins + playerTwo.wins){
