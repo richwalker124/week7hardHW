@@ -499,7 +499,7 @@ if (playerOne.inUse === true && playerOneLocal === true){
     userNameOne(hide);
 }else if (playerOne.inUse !== true && playerOneLocal !== true){
     //console.log("Show name one")
-///playButtonsOne(hide)
+playButtonsOne(hide)
     //userNameOne(show)
 }
 
@@ -514,7 +514,7 @@ if (playerTwo.inUse === true && playerTwoLocal === true){
     userNameTwo(hide);
 }else if (playerTwo.inUse !== true && playerTwoLocal !== true) {
     //console.log("Show name two")
-    //playButtonsTwo(hide);
+    playButtonsTwo(hide);
    // userNameTwo(show);
 }
 
