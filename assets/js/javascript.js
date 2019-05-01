@@ -134,7 +134,7 @@ function userNameTwo(arg){
 function playButtonsOne(arg){
     if (arg === show){
     $(".playerOneButtons").show();
-    //$(".chat-box").show();
+   //$(".chat-input").show();
 }
     if (arg === hide){
         $(".playerOneButtons").hide();
@@ -145,11 +145,11 @@ function playButtonsOne(arg){
 function playButtonsTwo(arg){
     if (arg === show){
     $(".playerTwoButtons").show();
-    //$(".chat-box").show();
+   // $(".chat-box").show();
 }
     if (arg === hide){
         $(".playerTwoButtons").hide();
-        //$(".chat-box").hide();
+       // $(".chat-box").hide();
     }
 }
 // playButtonsOne(hide);
@@ -415,9 +415,15 @@ function chatbox(){
 
 function showChat (){
     if (playerOneLocal === true || playerTwoLocal === true){
+        console.log("show")
         $(".chat-box").show();
+        $(".chat-input").show();
+        $(".chat-card").show();
     }else{
+        console.log("hide")
         $(".chat-box").hide();
+        $(".chat-input").hide();
+        $(".chat-card").show();
     }
 }
 

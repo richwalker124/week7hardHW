@@ -1,17 +1,37 @@
-.text-box{
-    width : 40vw; 
-    height : 30vw;
-}
+/*div that holds chat box.*/
+/* .text-box{
+    width : 30vw; 
+    height : 20vw;
+     margin : 50vw; 
+     padding: 1vw; 
+} */
 
+/*Button to send chat*/
 .chat-input{
-    margin : 1vw;
+    margin: .5vw .5vw 0vw .5vw;
+    
 }
 
+/*The box where the user text actually goes*/
+.user-chat{
+height : 15vw;   
+
+overflow-y: auto;
+
+
+}
+.card {
+    margin: 1vw;
+}
+
+/*user input box for chat*/
 .player-chat{
     height : 2vw;
     width:100%;
-    margin-left : 1vw;
-    overflow: scroll;
+    margin : 1vw;
+    
+    
+
     
 }
 
